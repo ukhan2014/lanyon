@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Usman Khan</title>
+ <link href="https://kodiak.beardom.xyz//atom.xml" rel="self"/>
+ <link href="https://kodiak.beardom.xyz//"/>
+ <updated>2020-04-21T23:46:38+01:00</updated>
+ <id>https://kodiak.beardom.xyz</id>
+ <author>
+   <name>Usman Khan</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>I am Usman Khan</title>
+   <link href="https://kodiak.beardom.xyz/2020/04/03/introducing-lanyon/"/>
+   <updated>2020-04-03T00:00:00+01:00</updated>
+   <id>https://kodiak.beardom.xyz//2020/04/03/introducing-lanyon</id>
+   <content type="html">&lt;p&gt;I am into science of various types.&lt;/p&gt;
+
+&lt;p&gt;I like to play with software and electronics because that is that I work with. But I find pleasure in most other forms of art and games as well.&lt;/p&gt;
+
+&lt;p&gt;You want (need) some work done? Something technical, something scientific… something worth doing? I can (probably) do it for you. For a Price. :)&lt;/p&gt;
+
+&lt;p&gt;Thanks!&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>

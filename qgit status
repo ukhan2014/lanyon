@@ -1,0 +1,153 @@
+[1mdiff --git a/_config.yml b/_config.yml[m
+[1mindex 45bc1ac..0a4b6c2 100644[m
+[1m--- a/_config.yml[m
+[1m+++ b/_config.yml[m
+[36m@@ -1,17 +1,18 @@[m
+ # Setup[m
+[31m-title:               Lanyon[m
+[31m-tagline:             'A Jekyll theme'[m
+[31m-description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'[m
+[31m-url:                 http://lanyon.getpoole.com[m
+[31m-baseurl:             ''[m
+[32m+[m[32mtitle:              Usman Khan[m[41m [m
+[32m+[m[32mtagline:             'Look ma, a website!'[m
+[32m+[m[32mdescription:         'I wanted to make a website to use as a journal, basically. So here it is.'[m
+[32m+[m[32murl:                 'https://kodiak.beardom.xyz'[m
+[32m+[m[32m#siteurl:             'https://kodiak.golobeardom.xyz'[m
+[32m+[m[32m#baseurl:             '/'[m
+ paginate:            5[m
+ permalink:           pretty[m
+ [m
+ # About/contact[m
+ author:[m
+[31m-  name:              Mark Otto[m
+[31m-  url:               https://twitter.com/mdo[m
+[31m-  email:             markdotto@gmail.com[m
+[32m+[m[32m  name:              Usman Khan[m[41m [m
+[32m+[m[32m  #  url:               https://kodiak.beardom.xyz[m
+[32m+[m[32m  email:[m[41m             [m
+ [m
+ # Gems[m
+ plugins:[m
+[36m@@ -19,4 +20,4 @@[m [mplugins:[m
+ [m
+ # Custom vars[m
+ version:             1.1.0[m
+[31m-google_analytics_id: #UA-XXXX-Y[m
+[32m+[m[32m#google_analytics_id: #UA-XXXX-Y[m
+[1mdiff --git a/_includes/head.html b/_includes/head.html[m
+[1mindex 44e3f5d..cd2dc7a 100644[m
+[1m--- a/_includes/head.html[m
+[1m+++ b/_includes/head.html[m
+[36m@@ -13,16 +13,16 @@[m
+   </title>[m
+ [m
+   {% if page.url and site.baseurl %}[m
+[31m-  <link rel="canonical" href="{{ page.url | absolute_url }}">[m
+[32m+[m[32m  <link rel="canonical" href="{{ site.url | absolute_url }}">[m
+   {% endif %}[m
+ [m
+[31m-  <link rel="stylesheet" href="{{ '/public/css/poole.css' | absolute_url }}">[m
+[31m-  <link rel="stylesheet" href="{{ '/public/css/syntax.css' | absolute_url }}">[m
+[31m-  <link rel="stylesheet" href="{{ '/public/css/lanyon.css' | absolute_url }}">[m
+[32m+[m[32m  <link rel="stylesheet" href="{{ 'https://kodiak.beardom.xyz/public/css/poole.css' | absolute_url }}">[m
+[32m+[m[32m  <link rel="stylesheet" href="{{ 'https://kodiak.beardom.xyz/public/css/syntax.css' | absolute_url }}">[m
+[32m+[m[32m  <link rel="stylesheet" href="{{ 'https://kodiak.beardom.xyz/public/css/lanyon.css' | absolute_url }}">[m
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">[m
+ [m
+[31m-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/public/apple-touch-icon-precomposed.png' | absolute_url }}">[m
+[31m-  <link rel="shortcut icon" href="{{ '/public/favicon.ico' | absolute_url }}">[m
+[32m+[m[32m  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ 'https://kodiak.beardom.xyz/public/apple-touch-icon-precomposed.png' | absolute_url }}">[m
+[32m+[m[32m  <link rel="shortcut icon" href="{{ 'https://kodiak.beardom.xyz/public/favicon.ico' | absolute_url }}">[m
+ [m
+   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/atom.xml' | absolute_url }}">[m
+ [m
+[1mdiff --git a/_includes/sidebar.html b/_includes/sidebar.html[m
+[1mindex 762202a..3e6847f 100644[m
+[1m--- a/_includes/sidebar.html[m
+[1m+++ b/_includes/sidebar.html[m
+[36m@@ -9,7 +9,7 @@[m
+   </div>[m
+ [m
+   <nav class="sidebar-nav">[m
+[31m-    <a class="sidebar-nav-item{% if page.title == 'Home' %} active{% endif %}" href="{{ '/' | absolute_url }}">Home</a>[m
+[32m+[m[32m    <a class="sidebar-nav-item{% if page.title == 'Home' %} active{% endif %}" href="{{ node.url | absolute_url }}">Home</a>[m
+ [m
+     {% comment %}[m
+       The code below dynamically generates a sidebar nav of pages with[m
+[36m@@ -20,13 +20,12 @@[m
+     {% for node in pages_list %}[m
+       {% if node.title != null %}[m
+         {% if node.layout == "page" %}[m
+[31m-          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}">{{ node.title }}</a>[m
+[32m+[m		[32m  <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}">{{ node.title }}</a>[m
+         {% endif %}[m
+       {% endif %}[m
+     {% endfor %}[m
+ [m
+[31m-    <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>[m
+[31m-    <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>[m
+[32m+[m
+     <span class="sidebar-nav-item">Currently v{{ site.version }}</span>[m
+   </nav>[m
+ [m
+[1mdiff --git a/_posts/2020-04-03-introducing-lanyon.md b/_posts/2020-04-03-introducing-lanyon.md[m
+[1mindex 13e7ce4..d573ff3 100644[m
+[1m--- a/_posts/2020-04-03-introducing-lanyon.md[m
+[1m+++ b/_posts/2020-04-03-introducing-lanyon.md[m
+[36m@@ -1,38 +1,13 @@[m
+ ---[m
+ layout: post[m
+[31m-title: Introducing Lanyon[m
+[32m+[m[32mtitle: I am Usman Khan[m[41m[m
+ ---[m
+ [m
+[31m-Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.[m
+[32m+[m[32mI am into science of various types.[m[41m[m
+ [m
+[31m-### Built on Poole[m
+[32m+[m[32mI like to play with software and electronics because that is that I work with. But I find pleasure in most other forms of art and games as well.[m[41m[m
+ [m
+[31m-Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by [@mdo](https://twitter.com/mdo). Poole, and every theme built on it (like Lanyon here) includes the following:[m
+[32m+[m[32mYou want (need) some work done? Something technical, something scientific... something worth doing? I can (probably) do it for you. For a Price. :)[m[41m[m
+ [m
+[31m-* Complete Jekyll setup included (layouts, config, [404](/404), [RSS feed](/atom.xml), posts, and [example page](/about))[m
+[31m-* Mobile friendly design and development[m
+[31m-* Easily scalable text and component sizing with `rem` units in the CSS[m
+[31m-* Support for a wide gamut of HTML elements[m
+[31m-* Related posts (time-based, because Jekyll) below each post[m
+[31m-* Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)[m
+[31m-[m
+[31m-### Lanyon features[m
+[31m-[m
+[31m-In addition to the features of Poole, Lanyon adds the following:[m
+[31m-[m
+[31m-* Toggleable sliding sidebar (built with only CSS) via **☰** link in top corner[m
+[31m-* Sidebar includes support for textual modules and a dynamically generated navigation with active link support[m
+[31m-* Two orientations for content and sidebar, default (left sidebar) and [reverse](https://github.com/poole/lanyon#reverse-layout) (right sidebar), available via `<body>` classes[m
+[31m-* [Eight optional color schemes](https://github.com/poole/lanyon#themes), available via `<body>` classes[m
+[31m-[m
+[31m-[Head to the readme](https://github.com/poole/lanyon#readme) to learn more.[m
+[31m-[m
+[31m-### Browser support[m
+[31m-[m
+[31m-Lanyon is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.[m
+[31m-[m
+[31m-### Download[m
+[31m-[m
+[31m-Lanyon is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/lanyon">GitHub repository</a> for downloads, bug reports, and features requests.[m
+ [m
+ Thanks![m
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 732d9f1..ebc2c87 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -7,7 +7,7 @@[m [mtitle: Home[m
+   {% for post in paginator.posts %}[m
+   <div class="post">[m
+     <h1 class="post-title">[m
+[31m-      <a href="{{ post.url | absolute_url }}">[m
+[32m+[m[32m      <a href="{{ site.url | absolute_url }}">[m
+         {{ post.title }}[m
+       </a>[m
+     </h1>[m

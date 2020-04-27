@@ -1,17 +1,18 @@
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
-baseurl:             ''
+title:              Usman Khan 
+#tagline:             'The man, the myth, the [undead] legend...'
+description:         'I wanted to make a website to use as a journal, basically. So here it is.'
+url:                 'https://kodiak.beardom.xyz'
+siteurl:             'https://kodiak.beardom.xyz'
+baseurl:             '/'
 paginate:            5
 permalink:           pretty
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Usman Khan 
+  #  url:               https://kodiak.beardom.xyz
+  email:             
 
 # Gems
 plugins:
@@ -19,4 +20,4 @@ plugins:
 
 # Custom vars
 version:             1.1.0
-google_analytics_id: #UA-XXXX-Y
+#google_analytics_id: #UA-XXXX-Y
